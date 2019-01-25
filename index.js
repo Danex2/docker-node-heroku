@@ -5,4 +5,6 @@ app.get("/", (req, res) => {
   res.send("Hello from app");
 });
 
-app.listen(process.env.PORT, () => console.log("App listening on port: 4000"));
+app.listen(process.env.PORT, () =>
+  console.log(`App listening on port ${process.env.PORT}`)
+);
