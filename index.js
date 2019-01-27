@@ -5,6 +5,5 @@ app.get("/", (req, res) => {
   res.send("Hello from app");
 });
 
-app.listen(process.env.PORT, () =>
-  console.log(`App listening on port ${process.env.PORT}`)
-);
+// use the port defined by heroku when deploying but port 4000 for local dev
+app.listen(process.env.PORT || 4000, () => console.log("App running."));

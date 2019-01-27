@@ -10,4 +10,5 @@
 
 ## Some more notes
 
-1. Heroku handles assigning the port for you so in your index.js just do `process.env.PORT` and inside the dockerfile do `EXPOSE $PORT` (not sure about the expose part, will have to test)
+1. Heroku handles assigning the port for you so in your index.js just do `process.env.PORT` and inside the dockerfile do `EXPOSE $PORT`  
+   EDIT: EXPOSE \$PORT has to be there because of the same reason I used process.env in index.js, pre-defined by heroku
